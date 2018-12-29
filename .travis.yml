@@ -1,9 +1,11 @@
 language: python
+
 python:
   - "2.7"
   - "3.5"
   - "3.6"
   - "3.7"
+
 # command to install dependencies (note: use anaconda)
 install:
   - sudo apt-get update
@@ -23,4 +25,8 @@ install:
   - python setup.py install
 
 script:
-  - tests/test_sample.py
+  - pytest
+
+branches:
+  only:
+    - master
