@@ -1,4 +1,5 @@
-# Sample Test passing with nose and pytest
+def func(x):
+    return x + 1
 
-def test_pass():
-    assert True, "dummy sample test"
+def test_answer():
+    assert func(4) == 5
