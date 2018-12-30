@@ -1,40 +1,10 @@
 channels:
   - defaults
 dependencies:
-  - blas=1.0
-  - ca-certificates=2018.03.07
-  - certifi=2018.11.29
-  - icc_rt=2019.0.0
-  - intel-openmp=2019.1
-  - mkl=2019.1
-  - mkl_fft=1.0.6
-  - mkl_random=1.0.2
-  - numpy=1.15.4
-  - numpy-base=1.15.4
-  - openssl=1.1.1a
-  - pandas=0.23.4
-  - pip=18.1
   - python=3.7.1
-  - python-dateutil=2.7.5
-  - pytz=2018.7
-  - setuptools=40.6.3
-  - six=1.12.0
-  - sqlite=3.26.0
-  - vc=14.1
-  - vs2015_runtime=14.15.26706
-  - wheel=0.32.3
-  - wincertstore=0.2
+  - numpy
+  - pandas
+  - pip
   - pip:
-    - atomicwrites==1.2.1
-    - attrs==18.2.0
-    - chardet==3.0.4
-    - codecov==2.0.15
-    - colorama==0.4.1
-    - coverage==4.5.2
-    - idna==2.8
-    - more-itertools==5.0.0
-    - pluggy==0.8.0
-    - py==1.7.0
-    - pytest==4.0.2
-    - requests==2.21.0
-    - urllib3==1.24.1
+    - codecov
+    - pytest
