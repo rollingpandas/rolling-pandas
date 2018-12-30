@@ -23,6 +23,8 @@ install:
   - echo $TRAVIS_PYTHON_VERSION
   # Edit the environment.yml file for the target Python version
   - sed -i -E 's/(python=)(.*)/\1'$TRAVIS_PYTHON_VERSION'/' ./environment.yml
+  # Show updated environment.yml file
+  - echo "$(cat environment.yml)"
   - conda env create -n test-environment -f environment.yml
   - source activate test-environment
   - python setup.py install
