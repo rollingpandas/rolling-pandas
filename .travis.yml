@@ -19,8 +19,12 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda info -a
-  - conda create -n rpd --file environment.yml python=$TRAVIS_PYTHON_VERSION
-  - source activate rpd
+  - echo "Python version var"
+  - echo $TRAVIS_PYTHON_VERSION
+  # Edit the environment.yml file for the target Python version
+  - sed -i -E 's/(python=)(.*)/\1'$TRAVIS_PYTHON_VERSION'/' ./environment.yml
+  - conda env create -n test-environment -f environment.yml
+  - source activate test-environment
   - python setup.py install
 
 script:
